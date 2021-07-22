@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Collection;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberDao {
 	private static long nextId = 0;
 	
