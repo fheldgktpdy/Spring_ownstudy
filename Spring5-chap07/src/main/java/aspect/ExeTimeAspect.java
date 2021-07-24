@@ -15,11 +15,11 @@ public class ExeTimeAspect {
 	private void publicTarget() {
 	}
 	
-	@Around("publicTarget()")
+	@Around("publicTarget()")//ProceedingJoinPoint : 프록시 대상 객체의 method 호출시 사용.
 	public Object measure(ProceedingJoinPoint joinPoint)throws Throwable{
 		long start = System.nanoTime();
 		try {
-			Object result = joinPoint.proceed();
+			Object result = joinPoint.proceed();//proceed를 사용해 method 호출.
 			return result;
 		}finally {
 			long finish = System.nanoTime();
